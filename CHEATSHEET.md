@@ -8,10 +8,15 @@
 | `F11` | `exec pimpcasting.cfg` - casting settings |
 | `F10` | toggle netgraph |
 | `ALT + '` | console (the key next to Enter) |
-| `Fn + CTRL` | keyboard: Dota layer <-> Cast layer |
 | `Fn + ESC` | keyboard: back to L1 (typing) |
 
-`Fn` = outer-lower thumb key (hold). The right half of the keyboard types normally in every layer.
+`Fn` = outer-lower thumb key (hold). The right half types normally in every layer, except the right
+thumb cluster which holds the out-of-combat keys:
+
+```
+upper (inner -> outer):  F10   F11   F12   F9 broadcaster menu
+lower (outer -> inner):  ->L1  Dota<->Cast  . pause  (typing)
+```
 
 ## L5 Dota - hero play
 
@@ -37,12 +42,12 @@ thumb lower:  Fn  PGDN  ALT  SPACE      Fn, voice PTT, alt, camera
 
 ```
 ->L1   6      7      8      9      0      F8 sticky buy
-`      O      U      UP     F10    M      F11 cast cfg
-->Cast ·      LEFT   DOWN   RIGHT  F7     F12 play cfg
+`      O      U      UP     ·      M      ·
+·      ·      LEFT   DOWN   RIGHT  F7     ·
 ·      ·      ·      I      ·      ·
 
 thumb upper:  ALT+\ console
-thumb lower:  Fn  PGUP party voice  ·  . pause
+thumb lower:  Fn  PGUP party voice  ·  ·
 ```
 
 `Fn+1-5` groups 6-10 / `Fn+Q` learn abilities / `Fn+W` learn stats / `Fn+T` move / `Fn+H` inspect / `Fn+G` scout / `Fn+TAB` scoreboard.
@@ -51,8 +56,8 @@ thumb lower:  Fn  PGUP party voice  ·  . pause
 
 ```
 ESC    1      2      3      4      5      F4 FOW both
-TAB    Q      W      E      R      T      F3 FOW dire
-CTRL   A      S      D      F      G      F2 FOW radiant
+·      Q      W      E      R      T      F3 FOW dire
+CTRL   A      S      D      F      ·      F2 FOW radiant
 SHIFT  K      L      Z      -      =
        rune^  runev  LH     slower faster
 
@@ -68,12 +73,11 @@ thumb lower:  Fn  F8 win%  ALT  SPACE follow hero
 ### Fn held
 
 ```
-->L1   6      7      8      9      0      F9 broadcaster menu
-`      Y      U      I      O      F10    F11 cast cfg
-->Dota ·      ·      ·      ·      ·      F12 play cfg
+->L1   6      7      8      9      0      ·
+`      Y      U      I      O      ·      ·
 
 thumb upper:  ALT+\ console
-thumb lower:  Fn  ·  ·  . pause
+thumb lower:  Fn  ·  ·  ·
 ```
 
 `Fn+1-5` focus players 6-10 / `Fn+Q` net worth / `Fn+W` GPM / `Fn+E` buyback / `Fn+R` fantasy / `Fn+TAB` scoreboard.

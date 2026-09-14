@@ -96,8 +96,8 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 43,
-      "label": "TAB",
+      "keyCode": 65535,
+      "label": "TRANS",
       "extraLabel": {}
     },
     {
@@ -201,8 +201,8 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 10,
-      "label": "G",
+      "keyCode": 65535,
+      "label": "TRANS",
       "extraLabel": {}
     },
     {
@@ -381,8 +381,13 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 65535,
-      "label": "TRANS",
+      "keyCode": 17496,
+      "label": "LOCK L5",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 55,
+      "label": ".",
       "extraLabel": {}
     },
     {
@@ -391,33 +396,28 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 65535,
-      "label": "TRANS",
+      "keyCode": 67,
+      "label": "F10",
       "extraLabel": {}
     },
     {
-      "keyCode": 65535,
-      "label": "TRANS",
+      "keyCode": 68,
+      "label": "F11",
       "extraLabel": {}
     },
     {
-      "keyCode": 65535,
-      "label": "TRANS",
+      "keyCode": 69,
+      "label": "F12",
       "extraLabel": {}
     },
     {
-      "keyCode": 65535,
-      "label": "TRANS",
-      "extraLabel": {}
-    },
-    {
-      "keyCode": 65535,
-      "label": "TRANS",
+      "keyCode": 66,
+      "label": "F9",
       "extraLabel": {}
     }
   ],
   "colormap": [
-    15,
+    10,
     0,
     0,
     0,
@@ -449,7 +449,7 @@
     15,
     15,
     15,
-    15,
+    10,
     2,
     2,
     2,
@@ -465,7 +465,7 @@
     15,
     15,
     15,
-    11,
+    10,
     1,
     1,
     5,
@@ -486,17 +486,17 @@
     4,
     4,
     2,
-    15,
+    10,
     4,
     8,
     8,
+    8,
+    6,
     15,
-    15,
-    15,
-    15,
-    15,
-    15,
-    15,
+    7,
+    7,
+    7,
+    7,
     7,
     7,
     7,

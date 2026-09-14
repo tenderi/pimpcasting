@@ -40,7 +40,7 @@ def key(name):
     return {"keyCode": HID[name], "label": name, "extraLabel": {}}
 
 # Palette indices from the existing Dota.json palette
-AMBER, GREEN, WHITE, LIME, CYAN, BLUE, MAGENTA, SKY, PURPLE, RED, OFF = 0, 1, 2, 3, 4, 5, 6, 7, 8, 11, 15
+AMBER, GREEN, WHITE, LIME, CYAN, BLUE, MAGENTA, SKY, PURPLE, LILAC, RED, OFF = 0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 15
 
 def layer(name, left, colors, glow, right=None):
     """left/right: {index: keyname}. Unset keys are transparent. glow = underglow + neuron colour."""
@@ -71,7 +71,12 @@ dota_left = {
     64: "ENTER", 65: "Z", 66: "X", 67: "C",                                    # chat, items 4-6
     71: "SHIFT L6", 70: "PGDN", 69: "LALT", 68: "SPACE",                       # Fn, voice, alt, camera
 }
-dota_right = {72: "LOCK L1"}
+# Right thumb (76-79 upper inner->outer, 72-75 lower outer->inner; 75 stays transparent for typing)
+RIGHT_COMMON = {76: "F10", 77: "F11", 78: "F12", 79: "F9", 72: "LOCK L1", 74: "."}
+RIGHT_COLORS = {76: SKY, 77: SKY, 78: SKY, 79: SKY, 72: PURPLE, 73: PURPLE, 74: MAGENTA}
+MODS = {0: LILAC, 32: LILAC, 48: LILAC, 69: LILAC}                          # esc, ctrl, shift, alt
+
+dota_right = {**RIGHT_COMMON, 73: "LOCK L7"}
 dota_colors = {
     17: BLUE, 18: BLUE, 19: BLUE, 20: BLUE, 36: BLUE, 37: BLUE,            # abilities
     33: GREEN, 34: GREEN, 35: GREEN, 65: GREEN, 66: GREEN, 67: GREEN,      # items
@@ -81,7 +86,7 @@ dota_colors = {
     49: MAGENTA, 50: MAGENTA,                                              # scan, glyph
     6: WHITE, 22: WHITE, 38: WHITE, 53: WHITE,                             # shop, courier, quickbuy
     68: SKY, 64: SKY, 70: SKY,                                             # camera, chat, voice
-    71: PURPLE, 72: PURPLE,                                                # layer keys
+    71: PURPLE, **MODS, **RIGHT_COLORS,                                    # layer keys, mods, right thumb
 }
 
 #################################################################################################
@@ -89,19 +94,19 @@ dota_colors = {
 #################################################################################################
 dotafn_left = {
     0: "LOCK L1", 1: "6", 2: "7", 3: "8", 4: "9", 5: "0",         6: "F8",     # leave, groups 6-10, sticky buy
-    16: "`", 17: "O", 18: "U", 19: "UP", 20: "F10", 21: "M",      22: "F11",   # scoreboard, learn, stats, cam, netgraph, move, cast cfg
-    32: "LOCK L7", 34: "LEFT", 35: "DOWN", 36: "RIGHT", 37: "F7", 38: "F12",  # to Cast, cam, scout, play cfg
+    16: "`", 17: "O", 18: "U", 19: "UP", 21: "M",                              # scoreboard, learn, stats, cam, move
+    34: "LEFT", 35: "DOWN", 36: "RIGHT", 37: "F7",                             # cam, scout
     51: "I",                                                                   # inspect hero
-    64: "ALT+\\", 70: "PGUP", 68: ".",                                         # console, party voice, pause
+    64: "ALT+\\", 70: "PGUP",                                                  # console, party voice
 }
 dotafn_colors = {
     1: AMBER, 2: AMBER, 3: AMBER, 4: AMBER, 5: AMBER,                      # groups 6-10
     19: WHITE, 34: WHITE, 35: WHITE, 36: WHITE,                            # camera
     17: BLUE, 18: BLUE, 51: BLUE,                                          # learn abilities / stats, inspect
     21: RED, 37: RED,                                                      # move, scout
-    6: WHITE, 16: SKY, 20: SKY, 22: SKY, 38: SKY,                          # sticky buy, scoreboard, netgraph, cfgs
-    64: SKY, 70: SKY, 68: MAGENTA,                                         # console, party voice, pause
-    0: PURPLE, 32: PURPLE, 71: PURPLE,                                     # layer keys
+    6: WHITE, 16: SKY,                                                     # sticky buy, scoreboard
+    64: SKY, 70: SKY,                                                      # console, party voice
+    0: PURPLE, 71: PURPLE,                                                 # layer keys
 }
 
 #################################################################################################
@@ -109,13 +114,13 @@ dotafn_colors = {
 #################################################################################################
 cast_left = {
     0: "ESC",   1: "1", 2: "2", 3: "3", 4: "4", 5: "5",            6: "F4",     # hero select, players 2-5, FOW both
-    16: "TAB",  17: "Q", 18: "W", 19: "E", 20: "R", 21: "T",       22: "F3",    # KDA, cam up, level, xpm, gold, FOW dire
-    32: "LCTRL", 33: "A", 34: "S", 35: "D", 36: "F", 37: "G",     38: "F2",    # cam left/down/right, facet, FOW radiant
+    17: "Q", 18: "W", 19: "E", 20: "R", 21: "T",                  22: "F3",    # KDA, cam up, level, xpm, gold, FOW dire
+    32: "LCTRL", 33: "A", 34: "S", 35: "D", 36: "F",              38: "F2",    # cam left/down/right, facet, FOW radiant
     48: "LSHIFT", 49: "K", 50: "L", 51: "Z", 52: "-", 53: "=",                 # assisted cam, rune top/bot, LH, replay speed
     64: "ENTER", 65: "F5", 66: "F6", 67: "F7",                                 # chat, item stats, gold graph, xp graph
     71: "SHIFT L8", 70: "F8", 69: "LALT", 68: "SPACE",                         # Fn, win chance, alt, follow hero
 }
-cast_right = {72: "LOCK L1"}
+cast_right = {**RIGHT_COMMON, 73: "LOCK L5"}
 cast_colors = {
     18: WHITE, 33: WHITE, 34: WHITE, 35: WHITE, 68: WHITE,                 # camera
     1: AMBER, 2: AMBER, 3: AMBER, 4: AMBER, 5: AMBER,                      # hero / player focus
@@ -124,17 +129,16 @@ cast_colors = {
     65: CYAN, 66: CYAN, 67: CYAN, 70: CYAN,                                # graphs
     49: GREEN, 50: GREEN, 52: LIME, 53: LIME,                              # rune jumps, replay speed
     48: RED, 64: SKY,                                                      # assisted camera, chat
-    71: PURPLE, 72: PURPLE,                                                # layer keys
+    71: PURPLE, **MODS, **RIGHT_COLORS,                                    # layer keys, mods, right thumb
 }
 
 #################################################################################################
 # Layer 8 "CastFn" - held via thumb 71 on top of Cast.
 #################################################################################################
 castfn_left = {
-    0: "LOCK L1", 1: "6", 2: "7", 3: "8", 4: "9", 5: "0",         6: "F9",     # leave, players 6-10, broadcaster menu
-    16: "`", 17: "Y", 18: "U", 19: "I", 20: "O", 21: "F10",       22: "F11",   # scoreboard, networth, gpm, buyback, fantasy, netgraph, cast cfg
-    32: "LOCK L5",                                                38: "F12",   # to Dota, play cfg
-    64: "ALT+\\", 68: ".",                                                     # console, pause
+    0: "LOCK L1", 1: "6", 2: "7", 3: "8", 4: "9", 5: "0",                      # leave, players 6-10
+    16: "`", 17: "Y", 18: "U", 19: "I", 20: "O",                               # scoreboard, networth, gpm, buyback, fantasy
+    64: "ALT+\\",                                                              # console
 }
 castfn_colors = {
     1: AMBER, 2: AMBER, 3: AMBER, 4: AMBER, 5: AMBER,                      # players 6-10

@@ -22,6 +22,16 @@ file. The import renames the layer and replaces its keys and colours. Repeat for
 **Save** to the keyboard. The palette is not imported; the files use the palette already on the neuron.
 Getting into L5 from L1 is whatever key you already use; leaving is `Fn + ESC` or the right thumb key.
 
+### Right thumb (same on Dota and Cast)
+
+Keys that are never needed mid-game live on the right thumb cluster, so they are always available
+without costing a left-hand slot. The big inner key stays transparent for typing.
+
+```
+upper (inner -> outer):  F10 netgraph   F11 cast cfg   F12 play cfg   F9 broadcaster menu
+lower (outer -> inner):  LOCK L1        swap Dota/Cast  . pause        (typing)
+```
+
 ## L5 Dota - hero play
 
 ```
@@ -36,9 +46,9 @@ thumb lower (outer -> inner):  Fn      PGDN   ALT    SPACE    Fn, voice PTT, alt
 ```
 
 Colours: blue abilities, green items, cyan TP, red attack/hold/move-direction, amber select/control
-groups, magenta scan/glyph, white shop/courier/quickbuy, sky camera/chat/voice, purple layer keys.
-Modifiers and the right hand stay dark. Underglow tells the active layer apart: amber = Dota,
-sky = Cast, purple = an Fn layer is held. Fn layers light only the keys that do something.
+groups, magenta scan/glyph, white shop/courier/quickbuy, sky camera/chat/voice/F-keys, lilac modifiers,
+purple layer keys. Every key that does something is lit; transparent (typing) keys are dark.
+Underglow tells the active layer apart: amber = Dota, sky = Cast, purple = an Fn layer is held.
 
 What changed against the old layer:
 - `H` hold, `J` glyph, `P` scan moved onto the bottom row (they were right-hand only).
@@ -51,23 +61,23 @@ What changed against the old layer:
 
 ```
 LOCK L1  6     7     8      9     0     F8(sticky buy)
-`        O     U     UP     F10   M     F11(cast cfg)
-LOCK L7  ·     LEFT  DOWN   RIGHT F7    F12(play cfg)
+`        O     U     UP     ·     M     ·
+·        ·     LEFT  DOWN   RIGHT F7    ·
 ·        ·     ·     I      ·     ·
-scoreboard / learn abilities / learn stats / camera ESDF / netgraph / move / inspect / scout
+scoreboard / learn abilities / learn stats / camera ESDF / move / inspect / scout
 
 thumb upper:  ALT+\ (console)   ·   ·   ·
-thumb lower:  Fn    PGUP(party voice)   ·   .(pause)
+thumb lower:  Fn    PGUP(party voice)   ·   ·
 ```
 
-`Fn + 1-5` = control groups 6-10. `Fn + CTRL` locks to the Cast layer, `Fn + ESC` back to L1.
+`Fn + 1-5` = control groups 6-10. `Fn + ESC` back to L1.
 
 ## L7 Cast - spectating
 
 ```
 ESC    1      2      3      4      5      F4(FOW both)
-TAB    Q      W      E      R      T      F3(FOW dire)
-CTRL   A      S      D      F      G      F2(FOW radiant)
+·      Q      W      E      R      T      F3(FOW dire)
+CTRL   A      S      D      F      ·      F2(FOW radiant)
 SHIFT  K      L      Z      -      =
        rune↑  rune↓  LH     slower faster (replay)
 
@@ -81,16 +91,15 @@ thumb lower:  Fn      F8(win%)   ALT       SPACE(follow hero)
 ## L8 CastFn - hold the outer-lower thumb key
 
 ```
-LOCK L1  6     7     8      9     0     F9(broadcaster menu)
-`        Y     U     I      O     F10   F11(cast cfg)
-LOCK L5  ·     ·     ·      ·     ·     F12(play cfg)
-scoreboard / networth / gpm / buyback / fantasy / netgraph
+LOCK L1  6     7     8      9     0     ·
+`        Y     U     I      O     ·     ·
+scoreboard / networth / gpm / buyback / fantasy
 
 thumb upper:  ALT+\ (console)   ·   ·   ·
-thumb lower:  Fn    ·   ·   .(pause)
+thumb lower:  Fn    ·   ·   ·
 ```
 
-`Fn + 1-5` = focus players 6-10. `Fn + CTRL` locks back to the Dota layer.
+`Fn + 1-5` = focus players 6-10.
 
 ## Key index reference
 

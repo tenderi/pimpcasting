@@ -116,8 +116,8 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 67,
-      "label": "F10",
+      "keyCode": 65535,
+      "label": "TRANS",
       "extraLabel": {}
     },
     {
@@ -126,11 +126,6 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 68,
-      "label": "F11",
-      "extraLabel": {}
-    },
-    {
       "keyCode": 65535,
       "label": "TRANS",
       "extraLabel": {}
@@ -176,8 +171,13 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 17498,
-      "label": "LOCK L7",
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
       "extraLabel": {}
     },
     {
@@ -206,8 +206,8 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 69,
-      "label": "F12",
+      "keyCode": 65535,
+      "label": "TRANS",
       "extraLabel": {}
     },
     {
@@ -356,8 +356,8 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 55,
-      "label": ".",
+      "keyCode": 65535,
+      "label": "TRANS",
       "extraLabel": {}
     },
     {
@@ -437,9 +437,8 @@
     5,
     5,
     2,
-    7,
+    15,
     11,
-    7,
     15,
     15,
     15,
@@ -449,13 +448,14 @@
     15,
     15,
     15,
-    8,
+    15,
+    15,
     15,
     2,
     2,
     2,
     11,
-    7,
+    15,
     15,
     15,
     15,
@@ -485,7 +485,7 @@
     15,
     15,
     15,
-    6,
+    15,
     15,
     7,
     8,

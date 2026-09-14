@@ -46,8 +46,8 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 66,
-      "label": "F9",
+      "keyCode": 65535,
+      "label": "TRANS",
       "extraLabel": {}
     },
     {
@@ -121,16 +121,6 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 67,
-      "label": "F10",
-      "extraLabel": {}
-    },
-    {
-      "keyCode": 68,
-      "label": "F11",
-      "extraLabel": {}
-    },
-    {
       "keyCode": 65535,
       "label": "TRANS",
       "extraLabel": {}
@@ -176,11 +166,6 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 17496,
-      "label": "LOCK L5",
-      "extraLabel": {}
-    },
-    {
       "keyCode": 65535,
       "label": "TRANS",
       "extraLabel": {}
@@ -206,8 +191,23 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 69,
-      "label": "F12",
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
       "extraLabel": {}
     },
     {
@@ -356,8 +356,8 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 55,
-      "label": ".",
+      "keyCode": 65535,
+      "label": "TRANS",
       "extraLabel": {}
     },
     {
