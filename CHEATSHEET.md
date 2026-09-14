@@ -7,7 +7,7 @@
 | `F12` | `exec playing.cfg` - hero play settings |
 | `F11` | `exec pimpcasting.cfg` - casting settings |
 | `F10` | toggle netgraph |
-| `ALT + '` | console (the key next to Enter) |
+| `F1` (keyboard: `Fn + ENTER`) | console |
 | `Fn + ESC` | keyboard: back to L1 (typing) |
 
 `Fn` = outer-lower thumb key (hold). The right half types normally in every layer, except the right
@@ -46,7 +46,7 @@ thumb lower:  Fn  PGDN  ALT  SPACE      Fn, voice PTT, alt, camera
 ·      ·      LEFT   DOWN   RIGHT  F7     ·
 ·      ·      ·      I      ·      ·
 
-thumb upper:  ALT+\ console
+thumb upper:  F1 console
 thumb lower:  Fn  PGUP party voice  ·  ·
 ```
 
@@ -76,7 +76,7 @@ thumb lower:  Fn  F8 win%  ALT  SPACE follow hero
 ->L1   6      7      8      9      0      ·
 `      Y      U      I      O      ·      ·
 
-thumb upper:  ALT+\ console
+thumb upper:  F1 console
 thumb lower:  Fn  ·  ·  ·
 ```
 

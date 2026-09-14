@@ -66,7 +66,7 @@ LOCK L1  6     7     8      9     0     F8(sticky buy)
 ·        ·     ·     I      ·     ·
 scoreboard / learn abilities / learn stats / camera ESDF / move / inspect / scout
 
-thumb upper:  ALT+\ (console)   ·   ·   ·
+thumb upper:  F1 (console)   ·   ·   ·
 thumb lower:  Fn    PGUP(party voice)   ·   ·
 ```
 
@@ -95,7 +95,7 @@ LOCK L1  6     7     8      9     0     ·
 `        Y     U     I      O     ·     ·
 scoreboard / networth / gpm / buyback / fantasy
 
-thumb upper:  ALT+\ (console)   ·   ·   ·
+thumb upper:  F1 (console)   ·   ·   ·
 thumb lower:  Fn    ·   ·   ·
 ```
 

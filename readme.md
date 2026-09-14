@@ -35,7 +35,7 @@ Disable or move the Steam overlay screenshot key (default `F12`), otherwise it f
 
 - `F12` loads `playing.cfg`, `F11` loads `pimpcasting.cfg`. The console prints which one ran.
 - `F10` toggles the netgraph in both modes.
-- Console is `ALT` + the key at the US-backslash position (`'` on a Nordic layout). The plain key is unbound so it can no longer open while typing in chat.
+- Console is `F1` (on the Defy: `Fn + ENTER`). Dota's console hotkey cannot take a modifier, and the default key is `'` on a Nordic layout, so that one is unbound.
 
 ### The mirror rule
 

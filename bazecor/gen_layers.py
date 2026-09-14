@@ -97,7 +97,7 @@ dotafn_left = {
     16: "`", 17: "O", 18: "U", 19: "UP", 21: "M",                              # scoreboard, learn, stats, cam, move
     34: "LEFT", 35: "DOWN", 36: "RIGHT", 37: "F7",                             # cam, scout
     51: "I",                                                                   # inspect hero
-    64: "ALT+\\", 70: "PGUP",                                                  # console, party voice
+    64: "F1", 70: "PGUP",                                                      # console, party voice
 }
 dotafn_colors = {
     1: AMBER, 2: AMBER, 3: AMBER, 4: AMBER, 5: AMBER,                      # groups 6-10
@@ -138,7 +138,7 @@ cast_colors = {
 castfn_left = {
     0: "LOCK L1", 1: "6", 2: "7", 3: "8", 4: "9", 5: "0",                      # leave, players 6-10
     16: "`", 17: "Y", 18: "U", 19: "I", 20: "O",                               # scoreboard, networth, gpm, buyback, fantasy
-    64: "ALT+\\",                                                              # console
+    64: "F1",                                                                  # console
 }
 castfn_colors = {
     1: AMBER, 2: AMBER, 3: AMBER, 4: AMBER, 5: AMBER,                      # players 6-10

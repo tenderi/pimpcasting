@@ -221,8 +221,7 @@
 		}
 		"Console"
 		{
-			"Key"		"\"
-			"Modifier"		"ALT"
+			"Key"		"F1"
 		}
 		"Pause"
 		{
