@@ -39,7 +39,6 @@ Colours: blue abilities, green items, cyan TP, red attack/hold/move-direction, a
 groups, magenta scan/glyph, white shop/courier/quickbuy, sky camera/chat/voice, purple layer keys.
 Modifiers and the right hand stay dark. Underglow tells the active layer apart: amber = Dota,
 sky = Cast, purple = an Fn layer is held. Fn layers light only the keys that do something.
-groups, magenta scan/glyph, lime shop/courier/quickbuy, lavender modifiers, purple layer keys, sky voice.
 
 What changed against the old layer:
 - `H` hold, `J` glyph, `P` scan moved onto the bottom row (they were right-hand only).
