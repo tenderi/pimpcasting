@@ -35,7 +35,10 @@ thumb upper (outer -> inner):  ENTER   Z      X      C        chat, items 4-6
 thumb lower (outer -> inner):  Fn      PGDN   ALT    SPACE    Fn, voice PTT, alt, camera
 ```
 
-Colours: blue abilities, green items, cyan TP, red attack/hold/move-direction, orange select/control
+Colours: blue abilities, green items, cyan TP, red attack/hold/move-direction, amber select/control
+groups, magenta scan/glyph, white shop/courier/quickbuy, sky camera/chat/voice, purple layer keys.
+Modifiers and the right hand stay dark. Underglow tells the active layer apart: amber = Dota,
+sky = Cast, purple = an Fn layer is held. Fn layers light only the keys that do something.
 groups, magenta scan/glyph, lime shop/courier/quickbuy, lavender modifiers, purple layer keys, sky voice.
 
 What changed against the old layer:

@@ -40,14 +40,12 @@ def key(name):
     return {"keyCode": HID[name], "label": name, "extraLabel": {}}
 
 # Palette indices from the existing Dota.json palette
-ORANGE, GREEN, WHITE, LIME, CYAN, BLUE, MAGENTA, SKY, PURPLE, LAVENDER, LILAC, RED, OFF = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 15
+AMBER, GREEN, WHITE, LIME, CYAN, BLUE, MAGENTA, SKY, PURPLE, RED, OFF = 0, 1, 2, 3, 4, 5, 6, 7, 8, 11, 15
 
-def layer(name, left, colors, right=None):
-    """left/right: {index: keyname}. Unset keys are transparent."""
+def layer(name, left, colors, glow, right=None):
+    """left/right: {index: keyname}. Unset keys are transparent. glow = underglow + neuron colour."""
     keymap = [dict(TRANS) for _ in range(80)]
-    colormap = list(BASE["colormap"])
-    for i in range(80):
-        colormap[i] = OFF
+    colormap = [OFF] * 80 + [glow] * (len(BASE["colormap"]) - 80)
     for idx, k in {**left, **(right or {})}.items():
         keymap[idx] = key(k)
     for idx, c in colors.items():
@@ -79,13 +77,11 @@ dota_colors = {
     33: GREEN, 34: GREEN, 35: GREEN, 65: GREEN, 66: GREEN, 67: GREEN,      # items
     5: CYAN,                                                               # TP
     21: RED, 51: RED, 52: RED,                                             # attack, hold, move direction
-    1: ORANGE, 2: ORANGE, 3: ORANGE, 4: ORANGE, 16: ORANGE,                # select / control groups
-    68: WHITE, 0: WHITE,                                                   # camera, esc
+    1: AMBER, 2: AMBER, 3: AMBER, 4: AMBER, 16: AMBER,                     # select / control groups
     49: MAGENTA, 50: MAGENTA,                                              # scan, glyph
-    6: LIME, 22: LIME, 38: LIME, 53: LIME,                                 # shop, courier, quickbuy
-    32: LAVENDER, 48: LAVENDER, 69: LAVENDER,                              # modifiers
+    6: WHITE, 22: WHITE, 38: WHITE, 53: WHITE,                             # shop, courier, quickbuy
+    68: SKY, 64: SKY, 70: SKY,                                             # camera, chat, voice
     71: PURPLE, 72: PURPLE,                                                # layer keys
-    70: SKY, 64: LILAC,                                                    # voice, chat
 }
 
 #################################################################################################
@@ -99,11 +95,13 @@ dotafn_left = {
     64: "ALT+\\", 70: "PGUP", 68: ".",                                         # console, party voice, pause
 }
 dotafn_colors = {
-    1: ORANGE, 2: ORANGE, 3: ORANGE, 4: ORANGE, 5: ORANGE,
-    19: WHITE, 34: WHITE, 35: WHITE, 36: WHITE,
-    17: BLUE, 18: BLUE, 51: BLUE, 21: RED,
-    6: LIME, 37: LIME, 16: SKY, 68: RED, 70: SKY, 64: LILAC, 20: SKY,
-    22: LIME, 38: LIME, 0: PURPLE, 32: PURPLE, 71: PURPLE,
+    1: AMBER, 2: AMBER, 3: AMBER, 4: AMBER, 5: AMBER,                      # groups 6-10
+    19: WHITE, 34: WHITE, 35: WHITE, 36: WHITE,                            # camera
+    17: BLUE, 18: BLUE, 51: BLUE,                                          # learn abilities / stats, inspect
+    21: RED, 37: RED,                                                      # move, scout
+    6: WHITE, 16: SKY, 20: SKY, 22: SKY, 38: SKY,                          # sticky buy, scoreboard, netgraph, cfgs
+    64: SKY, 70: SKY, 68: MAGENTA,                                         # console, party voice, pause
+    0: PURPLE, 32: PURPLE, 71: PURPLE,                                     # layer keys
 }
 
 #################################################################################################
@@ -120,13 +118,13 @@ cast_left = {
 cast_right = {72: "LOCK L1"}
 cast_colors = {
     18: WHITE, 33: WHITE, 34: WHITE, 35: WHITE, 68: WHITE,                 # camera
-    1: ORANGE, 2: ORANGE, 3: ORANGE, 4: ORANGE, 5: ORANGE,                 # hero / player focus
+    1: AMBER, 2: AMBER, 3: AMBER, 4: AMBER, 5: AMBER,                      # hero / player focus
     6: MAGENTA, 22: MAGENTA, 38: MAGENTA,                                  # FOW
     17: BLUE, 19: BLUE, 20: BLUE, 21: BLUE, 36: BLUE, 51: BLUE,            # stat dropdowns
     65: CYAN, 66: CYAN, 67: CYAN, 70: CYAN,                                # graphs
-    49: LIME, 50: LIME, 52: SKY, 53: SKY,                                  # rune jumps, replay speed
-    48: LAVENDER, 32: LAVENDER, 69: LAVENDER, 64: LILAC, 0: WHITE,
-    71: PURPLE, 72: PURPLE,
+    49: GREEN, 50: GREEN, 52: LIME, 53: LIME,                              # rune jumps, replay speed
+    48: RED, 64: SKY,                                                      # assisted camera, chat
+    71: PURPLE, 72: PURPLE,                                                # layer keys
 }
 
 #################################################################################################
@@ -139,17 +137,18 @@ castfn_left = {
     64: "ALT+\\", 68: ".",                                                     # console, pause
 }
 castfn_colors = {
-    1: ORANGE, 2: ORANGE, 3: ORANGE, 4: ORANGE, 5: ORANGE,
-    17: BLUE, 18: BLUE, 19: BLUE, 20: BLUE, 16: SKY, 21: SKY,
-    6: LIME, 22: LIME, 38: LIME, 68: RED, 64: LILAC,
-    0: PURPLE, 32: PURPLE, 71: PURPLE,
+    1: AMBER, 2: AMBER, 3: AMBER, 4: AMBER, 5: AMBER,                      # players 6-10
+    17: BLUE, 18: BLUE, 19: BLUE, 20: BLUE,                                # stat dropdowns
+    6: MAGENTA, 16: SKY, 21: SKY, 22: SKY, 38: SKY,                        # broadcaster menu, scoreboard, netgraph, cfgs
+    64: SKY, 68: MAGENTA,                                                  # console, pause
+    0: PURPLE, 32: PURPLE, 71: PURPLE,                                     # layer keys
 }
 
 LAYERS = [
-    ("layer5-dota.json",   layer("Dota",   dota_left,   dota_colors,   dota_right)),
-    ("layer6-dotafn.json", layer("DotaFn", dotafn_left, dotafn_colors)),
-    ("layer7-cast.json",   layer("Cast",   cast_left,   cast_colors,   cast_right)),
-    ("layer8-castfn.json", layer("CastFn", castfn_left, castfn_colors)),
+    ("layer5-dota.json",   layer("Dota",   dota_left,   dota_colors,   AMBER,  dota_right)),
+    ("layer6-dotafn.json", layer("DotaFn", dotafn_left, dotafn_colors, PURPLE)),
+    ("layer7-cast.json",   layer("Cast",   cast_left,   cast_colors,   SKY,    cast_right)),
+    ("layer8-castfn.json", layer("CastFn", castfn_left, castfn_colors, PURPLE)),
 ]
 
 if __name__ == "__main__":
