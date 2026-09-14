@@ -1,0 +1,697 @@
+{
+  "device": {
+    "vendor": "Dygma",
+    "product": "Defy",
+    "keyboardType": "wired",
+    "displayName": "Dygma Defy wired",
+    "urls": [
+      {
+        "name": "Homepage",
+        "url": "https://www.dygma.com/defy/"
+      }
+    ]
+  },
+  "language": "en-US",
+  "layerNames": [],
+  "layerName": "Dota",
+  "keymap": [
+    {
+      "keyCode": 41,
+      "label": "ESC",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 30,
+      "label": "1",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 31,
+      "label": "2",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 32,
+      "label": "3",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 33,
+      "label": "4",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 34,
+      "label": "5",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 61,
+      "label": "F4",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 43,
+      "label": "TAB",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 20,
+      "label": "Q",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 26,
+      "label": "W",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 8,
+      "label": "E",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 21,
+      "label": "R",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 23,
+      "label": "T",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 60,
+      "label": "F3",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 224,
+      "label": "LCTRL",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 4,
+      "label": "A",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 22,
+      "label": "S",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 7,
+      "label": "D",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 9,
+      "label": "F",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 10,
+      "label": "G",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 59,
+      "label": "F2",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 225,
+      "label": "LSHIFT",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 19,
+      "label": "P",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 13,
+      "label": "J",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 11,
+      "label": "H",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 25,
+      "label": "V",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 28,
+      "label": "Y",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 40,
+      "label": "ENTER",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 29,
+      "label": "Z",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 27,
+      "label": "X",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 6,
+      "label": "C",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 44,
+      "label": "SPACE",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 226,
+      "label": "LALT",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 78,
+      "label": "PGDN",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 17455,
+      "label": "SHIFT L6",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 17492,
+      "label": "LOCK L1",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    },
+    {
+      "keyCode": 65535,
+      "label": "TRANS",
+      "extraLabel": {}
+    }
+  ],
+  "colormap": [
+    2,
+    0,
+    0,
+    0,
+    0,
+    4,
+    3,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    0,
+    5,
+    5,
+    5,
+    5,
+    11,
+    3,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    9,
+    1,
+    1,
+    1,
+    5,
+    5,
+    3,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    9,
+    6,
+    6,
+    11,
+    11,
+    3,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    10,
+    1,
+    1,
+    1,
+    2,
+    9,
+    7,
+    8,
+    8,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15,
+    15
+  ],
+  "palette": [
+    {
+      "r": 255,
+      "g": 196,
+      "b": 0,
+      "rgb": "rgb(255, 196, 0)"
+    },
+    {
+      "r": 0,
+      "g": 254,
+      "b": 24,
+      "rgb": "rgb(0, 254, 24)"
+    },
+    {
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "rgb": "rgb(255, 255, 255)"
+    },
+    {
+      "r": 231,
+      "g": 255,
+      "b": 0,
+      "rgb": "rgb(231, 255, 0)"
+    },
+    {
+      "r": 0,
+      "g": 254,
+      "b": 234,
+      "rgb": "rgb(0, 254, 234)"
+    },
+    {
+      "r": 0,
+      "g": 52,
+      "b": 255,
+      "rgb": "rgb(0, 52, 255)"
+    },
+    {
+      "r": 255,
+      "g": 0,
+      "b": 232,
+      "rgb": "rgb(255, 0, 232)"
+    },
+    {
+      "r": 87,
+      "g": 164,
+      "b": 255,
+      "rgb": "rgb(87, 164, 255)"
+    },
+    {
+      "r": 144,
+      "g": 19,
+      "b": 254,
+      "rgb": "rgb(144, 19, 254)"
+    },
+    {
+      "r": 239,
+      "g": 219,
+      "b": 255,
+      "rgb": "rgb(239, 219, 255)"
+    },
+    {
+      "r": 214,
+      "g": 129,
+      "b": 255,
+      "rgb": "rgb(214, 129, 255)"
+    },
+    {
+      "r": 255,
+      "g": 9,
+      "b": 0,
+      "rgb": "rgb(255, 9, 0)"
+    },
+    {
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "rgb": "rgb(0, 0, 0)"
+    },
+    {
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "rgb": "rgb(0, 0, 0)"
+    },
+    {
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "rgb": "rgb(0, 0, 0)"
+    },
+    {
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "rgb": "rgb(0, 0, 0)"
+    }
+  ]
+}
