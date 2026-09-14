@@ -62,11 +62,11 @@ What changed against the old layer:
 ```
 LOCK L1  6     7     8      9     0     F8(sticky buy)
 `        O     U     UP     ·     M     ·
-·        ·     LEFT  DOWN   RIGHT F7    ·
+·        ·     LEFT  DOWN   RIGHT F1    ·
 ·        ·     ·     I      ·     ·
 scoreboard / learn abilities / learn stats / camera ESDF / move / inspect / scout
 
-thumb upper:  F1 (console)   ·   ·   ·
+thumb upper:  F7 (console)   ·   ·   ·
 thumb lower:  Fn    PGUP(party voice)   ·   ·
 ```
 
@@ -81,7 +81,7 @@ CTRL   A      S      D      F      ·      F2(FOW radiant)
 SHIFT  K      L      Z      -      =
        rune↑  rune↓  LH     slower faster (replay)
 
-thumb upper:  ENTER   F5(items)  F6(gold)  F7(xp)
+thumb upper:  ENTER   F5(items)  F6(gold)  F1(xp)
 thumb lower:  Fn      F8(win%)   ALT       SPACE(follow hero)
 ```
 
@@ -95,7 +95,7 @@ LOCK L1  6     7     8      9     0     ·
 `        Y     U     I      O     ·     ·
 scoreboard / networth / gpm / buyback / fantasy
 
-thumb upper:  F1 (console)   ·   ·   ·
+thumb upper:  F7 (console)   ·   ·   ·
 thumb lower:  Fn    ·   ·   ·
 ```
 

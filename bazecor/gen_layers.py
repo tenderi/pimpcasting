@@ -95,9 +95,9 @@ dota_colors = {
 dotafn_left = {
     0: "LOCK L1", 1: "6", 2: "7", 3: "8", 4: "9", 5: "0",         6: "F8",     # leave, groups 6-10, sticky buy
     16: "`", 17: "O", 18: "U", 19: "UP", 21: "M",                              # scoreboard, learn, stats, cam, move
-    34: "LEFT", 35: "DOWN", 36: "RIGHT", 37: "F7",                             # cam, scout
+    34: "LEFT", 35: "DOWN", 36: "RIGHT", 37: "F1",                             # cam, scout
     51: "I",                                                                   # inspect hero
-    64: "F1", 70: "PGUP",                                                      # console, party voice
+    64: "F7", 70: "PGUP",                                                      # console, party voice
 }
 dotafn_colors = {
     1: AMBER, 2: AMBER, 3: AMBER, 4: AMBER, 5: AMBER,                      # groups 6-10
@@ -117,7 +117,7 @@ cast_left = {
     17: "Q", 18: "W", 19: "E", 20: "R", 21: "T",                  22: "F3",    # KDA, cam up, level, xpm, gold, FOW dire
     32: "LCTRL", 33: "A", 34: "S", 35: "D", 36: "F",              38: "F2",    # cam left/down/right, facet, FOW radiant
     48: "LSHIFT", 49: "K", 50: "L", 51: "Z", 52: "-", 53: "=",                 # assisted cam, rune top/bot, LH, replay speed
-    64: "ENTER", 65: "F5", 66: "F6", 67: "F7",                                 # chat, item stats, gold graph, xp graph
+    64: "ENTER", 65: "F5", 66: "F6", 67: "F1",                                 # chat, item stats, gold graph, xp graph
     71: "SHIFT L8", 70: "F8", 69: "LALT", 68: "SPACE",                         # Fn, win chance, alt, follow hero
 }
 cast_right = {**RIGHT_COMMON, 73: "LOCK L5"}
@@ -138,7 +138,7 @@ cast_colors = {
 castfn_left = {
     0: "LOCK L1", 1: "6", 2: "7", 3: "8", 4: "9", 5: "0",                      # leave, players 6-10
     16: "`", 17: "Y", 18: "U", 19: "I", 20: "O",                               # scoreboard, networth, gpm, buyback, fantasy
-    64: "F1",                                                                  # console
+    64: "F7",                                                                  # console
 }
 castfn_colors = {
     1: AMBER, 2: AMBER, 3: AMBER, 4: AMBER, 5: AMBER,                      # players 6-10

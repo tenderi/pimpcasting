@@ -7,7 +7,7 @@
 | `F12` | `exec playing.cfg` - hero play settings |
 | `F11` | `exec pimpcasting.cfg` - casting settings |
 | `F10` | toggle netgraph |
-| `F1` (keyboard: `Fn + ENTER`) | console |
+| `F7` (keyboard: `Fn + ENTER`) | console |
 | `Fn + ESC` | keyboard: back to L1 (typing) |
 
 `Fn` = outer-lower thumb key (hold). The right half types normally in every layer, except the right
@@ -43,10 +43,10 @@ thumb lower:  Fn  PGDN  ALT  SPACE      Fn, voice PTT, alt, camera
 ```
 ->L1   6      7      8      9      0      F8 sticky buy
 `      O      U      UP     ·      M      ·
-·      ·      LEFT   DOWN   RIGHT  F7     ·
+·      ·      LEFT   DOWN   RIGHT  F1     ·
 ·      ·      ·      I      ·      ·
 
-thumb upper:  F1 console
+thumb upper:  F7 console
 thumb lower:  Fn  PGUP party voice  ·  ·
 ```
 
@@ -61,7 +61,7 @@ CTRL   A      S      D      F      ·      F2 FOW radiant
 SHIFT  K      L      Z      -      =
        rune^  runev  LH     slower faster
 
-thumb upper:  ENTER  F5 items  F6 gold  F7 xp
+thumb upper:  ENTER  F5 items  F6 gold  F1 xp
 thumb lower:  Fn  F8 win%  ALT  SPACE follow hero
 ```
 
@@ -76,7 +76,7 @@ thumb lower:  Fn  F8 win%  ALT  SPACE follow hero
 ->L1   6      7      8      9      0      ·
 `      Y      U      I      O      ·      ·
 
-thumb upper:  F1 console
+thumb upper:  F7 console
 thumb lower:  Fn  ·  ·  ·
 ```
 

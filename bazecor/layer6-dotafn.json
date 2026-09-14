@@ -201,8 +201,8 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 64,
-      "label": "F7",
+      "keyCode": 58,
+      "label": "F1",
       "extraLabel": {}
     },
     {
@@ -336,8 +336,8 @@
       "extraLabel": {}
     },
     {
-      "keyCode": 58,
-      "label": "F1",
+      "keyCode": 64,
+      "label": "F7",
       "extraLabel": {}
     },
     {

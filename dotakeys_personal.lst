@@ -103,7 +103,7 @@
 		}
 		"ScoutSelect"
 		{
-			"Key"		"F7"
+			"Key"		"F1"
 		}
 		"CourierDeliver"
 		{
@@ -221,7 +221,8 @@
 		}
 		"Console"
 		{
-			"Key"		"F1"
+			"Key"		"F7"
+			"Mode"		"0"
 		}
 		"Pause"
 		{
@@ -290,7 +291,7 @@
 		}
 		"SpectatorStatsXP"
 		{
-			"Key"		"F7"
+			"Key"		"F1"
 		}
 		"SpectatorStatsWinChance"
 		{
