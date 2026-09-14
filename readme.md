@@ -1,138 +1,91 @@
-# pimpcasting
-Hey folks, 
+# pimpcasting (tenderi's fork)
 
-figured I should at least give rough directions when open sourcing my config. So here it goes, got way too big but there's a lot to talk about, I promise it's #worth.
+Dota 2 config files for two modes of use on one client: **playing a hero** and **casting / observing**.
+Forked from [JJLiebig/pimpcasting](https://github.com/JJLiebig/pimpcasting) (0.7.1, 2020) and rewritten
+in September 2026 against the current client. Every command in the cfg files was checked against the
+installed game binary; cheat-protected commands and dead aliases were removed.
 
-## Introduction and Prep
+## Files
 
-Before just casually copying this config in your Dota 2 config folder, please make sure that you save the current values for the console variables (convars) which are over ridden by my config. Example:
+| File | Purpose |
+|---|---|
+| `autoexec.cfg` | Runs at launch. Binds `F12` (playing) / `F11` (casting) / `F10` (netgraph toggle), drops the plain console bind, loads `playing.cfg`. |
+| `playing.cfg` | Hero gameplay state: camera, minimap, quickcast, unit control, shop/courier, HUD. Resets **every** convar that `pimpcasting.cfg` touches. |
+| `pimpcasting.cfg` | Casting state: slow smooth camera, free zoom, assisted camera on `SHIFT`/`MOUSE4`, hold `SPACE` to follow a hero, broadcaster HUD, rune camera jumps on `k`/`l`. |
+| `dotakeys_personal.lst` | Snapshot of the in-game Hotkeys profile ("ARROW"). Abilities, items and spectator keys live here, not in the cfg files. |
+| `benchmark.cfg` | Original FPS benchmark script (needs replay 3061101068 downloaded). Untouched. |
+| `binds.png` | Original author's recommended spectator hotkeys. The ARROW profile already uses them. |
+
+## Install (Linux / Steam)
+
+The cfg files are symlinked into the game so this repo stays the single source of truth:
 
 ```
-dota_camera_speed 3000
+DCFG="$HOME/.local/share/Steam/steamapps/common/dota 2 beta/game/dota/cfg"
+for f in autoexec.cfg playing.cfg pimpcasting.cfg; do ln -sfn "$PWD/$f" "$DCFG/$f"; done
 ```
 
-is way too slow to play the game with it but really perfect to obs/cast with. So what I would suggest is the following:
+`dotakeys_personal.lst` is **not** symlinked. The live copy is
+`~/.local/share/Steam/userdata/<steamid>/570/remote/cfg/dotakeys_personal.lst` (Steam Cloud synced).
+Copy it here after changing hotkeys in the menu to keep the snapshot current.
 
-1. Take a look into my `pimpcasting.cfg` and take note which commands you want to change for playing the game
-2. Save all of these commands in a `playing.cfg`, I'll attach my `playing.cfg` at the end of this post to give you a rough idea
-3. Import my `pimpcasting.cfg` which you use for casting and adjust it to your liking
-4. Adjust your `autoexec.cfg` and add binds to execute each playing or casting config it could look like this:
+Disable or move the Steam overlay screenshot key (default `F12`), otherwise it fires together with the config swap.
 
-```
-//autoexec.cfg example
-con_enable 1
+## Usage
 
-bind "F12" "exec playing.cfg"
-bind "F11" "exec pimpcasting.cfg"
+- `F12` loads `playing.cfg`, `F11` loads `pimpcasting.cfg`. The console prints which one ran.
+- `F10` toggles the netgraph in both modes.
+- Console is `ALT` + the key at the US-backslash position (`'` on a Nordic layout). The plain key is unbound so it can no longer open while typing in chat.
 
-exec playing.cfg //Change this to pimpcasting.cfg if you mainly cast
+### The mirror rule
 
-echo "autoexec loaded"
-```
+`playing.cfg` and `pimpcasting.cfg` are mirrors. Any convar or bind added to one **must** be reset in the
+other, otherwise switching with `F11`/`F12` leaks settings between modes (and Dota persists most convars,
+so a leaked value survives a restart).
 
-If you want to use these binds, make sure to disable the Steam Overlay camera feature as it uses `F12` as well. 
+### Rune camera jumps
 
-So let's do this: Go to `Steam\steamapps\common\dota 2 beta\game\dota\cfg` and adjust the `autoexec.cfg`, put your `playing.cfg` in there and paste my `pimpcasting.cfg` as well. Now open the game and adjust the keybinds in the spectator section:
+`pimpcasting.cfg` binds `k` / `l` to the power rune spots using 7.33+ map coordinates. After a map patch,
+stand the camera on the rune, run `dota_camera_get_pos` in the console and paste the new numbers.
+The same spots are also stored as saved camera positions 1 and 2 in the client settings.
 
-![keybinds](binds.png)
+## Casting with the assisted camera
 
-These are the settings I HEAVILY recommend. The camera movement can be done via `W` `A` `S` `D`, Creep Score is then rebound to `F`. This way your left hand never needs to move on the keyboard. Huge benefit in usability.
+(From the original readme, still accurate.)
 
-## Observing, using the config and the assisted camera
+Valve's "Assisted Camera" is a bit like the directed camera in DotaTV and follows heroes around
+without you controlling it. Load into a game in DotaTV, press `F11` after the draft, click on a lane,
+move to a hero and press `MOUSE4` (`dota_toggle_assisted_camera_operator`). Adjust with `W` `A` `S` `D`;
+the middle mouse button does not work while it is on.
 
-Firstly there is a cool feature made by Valve which is called "Assisted Camera". This is a bit like the directed camera in DotaTV (which doesn't exist when casting from a lobby btw) and follows heroes around without you having to always control it.
-
-Now load into a random game in DotaTV, after you're done loading and after the draft is done, press `F11` (or whichever other button you bound the `pimpcasting.cfg` to). Click on a lane and move to a hero, and press `Mouse4` (dota_toggle_assisted_camera_operator). Just leave your mouse and keyboard, don't do anything, you can see how your camera follows the heroes.
-
-To adjust the camera when assisted cam is on, use `W` `A` `S` `D`, middle mouse button doesn't work when it's on.
-
-This feature is absolutely amazing to help you a bit, however I would heavily recommend to NOT use it in teamfights as you as caster/obs will want to have full control over it, and the assisted camera doesn't give you 100% power over what it does. Same goes for framing some laning stage/jungle ganks. 
-
-I made these high quality flow chart as rough idea:
+Do **not** use it in teamfights or when framing ganks: turn it off and drag with `MOUSE3`.
 
 ```
                               Is there a teamfight?
                               /                   \
                              /                     \
-                            /                       \
-                          No                        Yes
-                          |                            \
-            Is a lot happening regardless?              \
-                /                       \          Turn assisted cam off
-               /                         \            Use Mouse 3 drag
-              /                           \
-             No                           Yes 
-             |                             |
-   Keep assisted cam on           Turn assisted cam off
-     Adjust with WASD                Use Mouse 3 drag
+                            No                     Yes
+                            |                        \
+              Is a lot happening regardless?      Turn assisted cam off
+                  /                   \             Use Mouse 3 drag
+                 No                   Yes
+                 |                     |
+       Keep assisted cam on    Turn assisted cam off
+         Adjust with WASD         Use Mouse 3 drag
 ```
 
-```
-          Do you use WASD to move the camera without using assisted cam?
-              /                                            \
-             /                                              \
-            /                                                \
-           No                                                Yes
-            |                                                 |
-          Correct!                                   Don't. It looks like shit
-```
+Do you use WASD to move the camera without assisted cam? Don't. It looks bad. Smooth drag via `MOUSE3`
+is by far the most precise camera.
 
-Smooth drag via `Mouse 3` still yields by far the most precise Camera, but it's fine to not use it a lot and abuse assisted camera, especially when casting.
+### Tips
 
-## Tips and Tricks
+- Clicking the minimap without assisted camera: hold `SHIFT` until the movement completes for a smooth transition.
+- LAN / on-stage: uncomment `dota_silent_roshan 1` in `pimpcasting.cfg` to mute Roshan and smoke sounds.
+- Zoom per mousewheel notch feels wrong: raise `dota_camera_broadcaster_mousewheel_direction_multiplier` and
+  `dota_camera_mousewheel_direction_multiplier` (0.0075 is a good second try).
+- Minimap icon sizes: `dota_minimap_hero_size` / `dota_minimap_rune_size`.
+- Minimap icons scaling with zoom: `dota_minimap_hero_scalar`, `_distance`, `_minimum`; set `dota_minimap_hero_scalar 0` to disable.
 
-### Do you want to click on the minimap AND don't have assisted camera on?
+## Credits
 
-Hold `SHIFT` until the movement completes, it makes the transition smooth. If there's impending action, don't.
-
-### Are you using this config on a LAN setting?
-
-Remove the // characters before "dota_silent_roshan 1". It shuts up roshan and smoke.
-
-### Do you want to quickly check if you are lagging on the server?
-
-Press `F10`, it will toggle the netgraph in the top right. Don't forget to disable it again.
-
-### The zoom out per mousewheel-notch is not good!
-
-Adjust these settings:
-
-```
-dota_camera_broadcaster_mousewheel_direction_multiplier 0.0075 
-dota_camera_mousewheel_direction_multiplier 0.0075
-```
-
-I like these personally, but try a couple different ones.
-
-### I can't move the camera any more via edge move!?
-
-Don't. Do. It.
-
-### Minimap icon sizes are weird.
-
-Adjust these settings:
-
-```
-dota_minimap_hero_size 700
-dota_minimap_rune_size 500
-```
-
-### Minimap icons get smaller and bigger and I don't like it.
-
-Adjust these settings to disable it or make things larger/smaller.
-
-```
-dota_minimap_hero_scalar 1
-dota_minimap_hero_scalar_distance 6
-dota_minimap_hero_scalar_minimum 700
-```
-
-## FAQ
-
-Will update with your questions here.
-
-Done!
-
-Enjoy your 9k mmr TTours. 
-
-Questions: Via Email or Twitter. 
+Original config and casting advice by Jonathan "PimpmuckL" Liebig.
